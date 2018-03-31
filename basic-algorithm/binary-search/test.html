@@ -33,6 +33,7 @@
 			let num = $('.input-num')
 			let times = $('.input-times')
 			$('.btn').onclick = () => {
+				// +将字符串转为数值
 				test(+limit.value, +num.value, +times.value)
 			}
 		}
@@ -73,17 +74,19 @@
 				alert('生成数数量不能大于上限值')
 				return
 			}
+
 			const arry1 = createData(num, limit).sort((a, b) => a - b)
 			const arry2 = createData(times, limit)
+			
 			let t1 = new Date()
-			arry2.forEach(function(e) {
+			arry2.forEach(e => {
 				binarySearch(arry1, e)
 			})
 			let t2 = new Date()
 			$('.s-binary').innerHTML =  (t2 - t1) / 1000 + 's'
 
 			let t3 = new Date()
-			arry2.forEach(function(e) {
+			arry2.forEach(e => {
 				loopSearch(arry1, e)
 			})
 			let t4 = new Date()
