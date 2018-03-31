@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<head>
+		<title>二分查找算法测试</title>
+	</head>
+	<body>
+		<p>
+			<label>上限值</label>
+			<input placeholder="生机随机数的上限值" class="input-limit">
+		</p>
+		<p>
+			<label>生成数数量</label>
+			<input placeholder="要生成随机数的数量" class="input-num">
+		</p>
+		<p>
+			<label>查找次数</label>
+			<input placeholder="查找次数" class="input-times">
+		</p>
+		<button class="btn">执行</button>
+		<p class="prompt">当数量比较大时 页面可能会卡死</p>
+		<p>
+			循环查找耗时：<span class="s-loop"></span>
+		</p>
+		<p>
+			二分查找耗时：<span class="s-binary"></span>
+		</p>
+		<script src="binary-search.js"></script>
+		<script>
+
+		function main() {
+			let limit = $('.input-limit')
+			let num = $('.input-num')
+			let times = $('.input-times')
+			$('.btn').onclick = () => {
+				test(+limit.value, +num.value, +times.value)
+			}
+		}
+
+		
+		// 普通循环查找
+		function loopSearch(arry, val) { 
+			let len = arry.length
+			for (let i = 0; i < len; i++) {
+				if (arry[i] === val) {
+					return i
+				}
+			}
+			return -1
+		}
+
+		function createData(len, limit) {
+			const arry = []
+			let temp = 0
+			for (let i = 0; i < len; i++) {
+				do {
+					temp = Math.floor(Math.random() * limit)
+				}
+				while (arry.indexOf(temp) !== -1) 
+				arry.push(temp)
+			}
+			return arry
+		}
+
+		function $(selector) {
+			return document.querySelector(selector)
+		}
+
+		function test(limit, num, times) {
+			if (num > limit) {
+				alert('生成数数量不能大于上限值')
+				return
+			}
+			const arry1 = createData(num, limit).sort((a, b) => a - b)
+			const arry2 = createData(times, limit)
+			let t1 = new Date()
+			arry2.forEach(function(e) {
+				binarySearch(arry1, e)
+			})
+			let t2 = new Date()
+			$('.s-binary').innerHTML =  (t2 - t1) / 1000 + 's'
+
+			let t3 = new Date()
+			arry2.forEach(function(e) {
+				loopSearch(arry1, e)
+			})
+			let t4 = new Date()
+			$('.s-loop').innerHTML =  (t4 - t3) / 1000 + 's'
+		}
+
+		main()
+		</script>
+	</body>
+</html>
