@@ -27,7 +27,7 @@
 		</p>
 		<script src="binary-search.js"></script>
 		<script>
-
+		// 主函数
 		function main() {
 			let limit = $('.input-limit')
 			let num = $('.input-num')
@@ -49,6 +49,7 @@
 			return -1
 		}
 
+		// 创建随机数组
 		function createData(len, limit) {
 			const arry = []
 			let temp = 0
@@ -66,6 +67,7 @@
 			return document.querySelector(selector)
 		}
 
+		// 测试函数
 		function test(limit, num, times) {
 			if (num > limit) {
 				alert('生成数数量不能大于上限值')
