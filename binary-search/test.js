@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<meta charset="utf-8">
-	<head>
-		<title>二分查找算法测试</title>
-	</head>
-	<body>
-		<p>
-			<label>上限值</label>
-			<input placeholder="生机随机数的上限值" class="input-limit">
-		</p>
-		<p>
-			<label>生成数数量</label>
-			<input placeholder="要生成随机数的数量" class="input-num">
-		</p>
-		<p>
-			<label>查找次数</label>
-			<input placeholder="查找次数" class="input-times">
-		</p>
-		<button class="btn">执行</button>
-		<p class="prompt">当数量比较大时 页面可能会卡死</p>
-		<p>
-			循环查找耗时：<span class="s-loop"></span>
-		</p>
-		<p>
-			二分查找耗时：<span class="s-binary"></span>
-		</p>
-		<script src="binary-search.js"></script>
-		<script>
+
 		// 主函数
 		function main() {
 			let limit = $('.input-limit')
@@ -94,6 +66,3 @@
 		}
 
 		main()
-		</script>
-	</body>
-</html>
