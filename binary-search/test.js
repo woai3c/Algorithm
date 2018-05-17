@@ -1,5 +1,11 @@
 const binarySearch = require('./binary_search.js') 
-// 普通循环查找
+
+/**
+ * [循环查找]
+ * @param  {array} 
+ * @param  {number} val  [value]
+ * @return {number}      [index]
+ */
 function loopSearch(arry, val) { 
 	let len = arry.length
 	for (let i = 0; i < len; i++) {
@@ -10,7 +16,12 @@ function loopSearch(arry, val) {
 	return -1
 }
 
-// 创建随机数组
+/**
+ * [创建随机数组]
+ * @param  {number} 
+ * @param  {number} 
+ * @return {array}        
+ */
 function createData(len, limit) {
 	const arry = []
 	let temp = 0
@@ -25,15 +36,21 @@ function createData(len, limit) {
 }
 
 
-// 测试函数
-function test(limit, num, times) {
-	if (num > limit) {
+/**
+ * [测试函数]
+ * @param  {number}  
+ * @param  {number} num   [生成数量]
+ * @param  {number} num2  [要查找多少次]
+ * @return {none}       
+ */
+function test(limit, num1, num2) {
+	if (num1 > limit) {
 		console.log('生成数数量不能大于上限值')
 		return
 	}
 
-	const arry1 = createData(num, limit).sort((a, b) => a - b)
-	const arry2 = createData(times, limit)
+	const arry1 = createData(num1, limit).sort((a, b) => a - b)
+	const arry2 = createData(num2, limit)
 	
 	let t1 = new Date()
 	arry2.forEach(e => {
@@ -50,4 +67,4 @@ function test(limit, num, times) {
 	console.log((t4 - t3) / 1000 + 's')
 }
 
-test(100000, 100, 10000)
+test(1000000, 100000, 100000)

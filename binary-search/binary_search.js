@@ -1,4 +1,9 @@
-// 二分查找算法实现
+/**
+ * [二分查找算法实现]
+ * @param  {array}  
+ * @param  {number} val  [value]
+ * @return {number}      [index]
+ */
 function binarySearch(arry, val) {  
 	let start = 0
 	let end = arry.length - 1
