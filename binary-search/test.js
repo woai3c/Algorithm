@@ -38,9 +38,9 @@ function createData(len, limit) {
 
 /**
  * [测试函数]
- * @param  {number}  
- * @param  {number} num   [生成数量]
- * @param  {number} num2  [要查找的次数]
+ * @param  {number} limit [生成值的上限]
+ * @param  {number} num   [被查找的目标数组]
+ * @param  {number} num2  [数组里的值是要查找的值，NUM是指数组包含多少个这样的值]
  * @return {none}       
  */
 function test(limit, num1, num2) {
