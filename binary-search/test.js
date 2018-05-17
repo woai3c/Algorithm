@@ -40,7 +40,7 @@ function createData(len, limit) {
  * [测试函数]
  * @param  {number}  
  * @param  {number} num   [生成数量]
- * @param  {number} num2  [要查找多少次]
+ * @param  {number} num2  [要查找的次数]
  * @return {none}       
  */
 function test(limit, num1, num2) {
