@@ -1,8 +1,7 @@
 /**
- * [二分查找算法实现]
- * @param  {array}  
- * @param  {number} val  [value]
- * @return {number}      [index]
+ * @param {number[]} arry
+ * @param {number} val
+ * @return {number}
  */
 function binarySearch(arry, val) {  
 	let start = 0
@@ -17,6 +16,6 @@ function binarySearch(arry, val) {
 			return mid
 		} 
 	} 
+
 	return -1
-} 
-module.exports = binarySearch
+}

@@ -1,13 +1,13 @@
 /**
- * [冒泡排序]
- * @param  {array} [乱序数组]
- * @return {array} [顺序/倒序数组]
+ * @param {number[]} arry
+ * @return {number[]}
  */
 function bubble(arry) {
 	let len = arry.length - 1
 	let temp
 	for (let i = 0; i < len; i++) {
-		for (let j = 0; j < len; j++) {
+		// len - i 可以排除上一轮最大的数 不用再对比 减少对比次数
+		for (let j = 0, l = len - i; j < l; j++) {
 			if (arry[j] > arry[j + 1]) {
 				temp = arry[j]
 				arry[j] = arry[j + 1]
@@ -15,7 +15,6 @@ function bubble(arry) {
 			}
 		}
 	}
+	
 	return arry
 }
-
-module.exports = bubble
