@@ -18,3 +18,5 @@ function bubble(arry) {
 	
 	return arry
 }
+
+module.exports = bubble

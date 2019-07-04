@@ -19,3 +19,5 @@ function binarySearch(arry, val) {
 
 	return -1
 }
+
+module.exports = binarySearch
