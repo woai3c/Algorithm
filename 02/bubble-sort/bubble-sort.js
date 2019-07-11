@@ -2,7 +2,7 @@
  * @param {number[]} arry
  * @return {number[]}
  */
-function bubble(arry) {
+function bubbleSort(arry) {
 	let len = arry.length - 1
 	let temp
 	for (let i = 0; i < len; i++) {
@@ -19,4 +19,4 @@ function bubble(arry) {
 	return arry
 }
 
-module.exports = bubble
+module.exports = bubbleSort
