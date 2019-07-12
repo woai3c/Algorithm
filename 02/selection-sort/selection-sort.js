@@ -1,6 +1,6 @@
 /**
  * @param {number[]} arry
- * @return {number[]}
+ * @return {void}
  */
 function selectionSort(arry) {
 	const len = arry.length - 1
@@ -16,8 +16,6 @@ function selectionSort(arry) {
 		arry[i] = arry[minIndex]
 		arry[minIndex] = temp
 	}
-	
-	return arry
 }
 
 module.exports = selectionSort
