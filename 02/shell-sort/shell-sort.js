@@ -13,9 +13,9 @@ function shellSort(arry) {
     while (step >= 1) {
         for (let i = step; i < len; i++) {
             for (let j = i; j >= step; j -= step) {
-                if (arry[j] < arry[j - step]) {
+                const tempIndex = j - step
+                if (arry[j] < arry[tempIndex]) {
                     const tempVal = arry[j]
-                    const tempIndex = j - step
                     arry[j] = arry[tempIndex]
                     arry[tempIndex] = tempVal
                 } else {
@@ -24,7 +24,7 @@ function shellSort(arry) {
             }
         }
 
-        step = ~~(step / 3)
+        step = Math.floor(step / 3)
     }
 }
 
