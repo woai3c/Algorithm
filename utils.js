@@ -39,14 +39,14 @@ function loopSearchFindVal(arry, val) {
 
 /**
  * @param {number[]} arry
- * @param {number} x
- * @param {number} y
+ * @param {number} i
+ * @param {number} j
  * @return {void}
  */
-function exchange(arry, x, y) { 
-	const temp = arry[x]
-	arry[x] = arry[y]
-	arry[y] = temp
+function exchange(arry, i, j) { 
+	const temp = arry[i]
+	arry[i] = arry[j]
+	arry[j] = temp
 }
 
 module.exports = {
