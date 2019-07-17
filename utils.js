@@ -37,7 +37,20 @@ function loopSearchFindVal(arry, val) {
 	return -1
 }
 
+/**
+ * @param {number[]} arry
+ * @param {number} x
+ * @param {number} y
+ * @return {void}
+ */
+function exchange(arry, x, y) { 
+	const temp = arry[x]
+	arry[x] = arry[y]
+	arry[y] = temp
+}
+
 module.exports = {
     generateRandomIntegerArry,
-    loopSearchFindVal,
+	loopSearchFindVal,
+	exchange,
 }
