@@ -8,7 +8,7 @@
 |[快速排序](https://github.com/woai3c/Algorithm/tree/master/02/quick-sort)|否|是|NlogN|logN|运行效率由概率提供保证|
 |[三向快速排序](https://github.com/woai3c/Algorithm/tree/master/02/quick-sort)|否|是|介于N和NlogN之间|logN|运行效率由概率提供保证，同时也取决于输入元素的分布情况|
 |[归并排序](https://github.com/woai3c/Algorithm/tree/master/02/merge-sort)|否|是|NlogN|N||
-|堆排序|否|是|NlogN|1||
+|[堆排序](https://github.com/woai3c/Algorithm/tree/master/02/heap-sort)|否|是|NlogN|1||
 
 
 ## 数据结构
