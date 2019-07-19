@@ -40,13 +40,13 @@ function sort(arry, start, end) {
  * @return {void}
  */
 function merge(arry, start, mid, end) {
-    const tempArry = [...arry]
-    let i = start
-    let j = mid + 1
-    for (let k = i; k <= end; k++) {
-        if (j > end) {
+    const tempArry = arry.slice(start, end + 1)
+    let i = 0, j = mid - start + 1
+    let leftEnd = mid - start, rightEnd = end - start
+    for (let k = start; k <= end; k++) {
+        if (j > rightEnd) {
             arry[k] = tempArry[i++]
-        } else if (i > mid) {
+        } else if (i > leftEnd) {
             arry[k] = tempArry[j++]
         } else if (tempArry[i] < tempArry[j]) {
             arry[k] = tempArry[i++]
