@@ -17,5 +17,8 @@
 
 ## 测试本章所有排序方法
 ```js
-node compare-test.js
+node compare-test.js 生成值的上限 生成值的个数
+
+// example
+node compare-test.js 100000 8888
 ```
