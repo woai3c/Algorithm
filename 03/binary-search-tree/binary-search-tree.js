@@ -135,7 +135,7 @@ BinarySearchTree.prototype.sort = function () {
     subSort(this.root.left, this.arry)
     this.arry.push(this.root.val)
     subSort(this.root.right, this.arry)
-    return this.arry
+    return [...this.arry]
 }
 
 function subSort(node, arry) {
