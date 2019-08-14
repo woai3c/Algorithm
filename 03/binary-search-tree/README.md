@@ -12,6 +12,7 @@
 
 虽然二叉查找树的最坏效率是 O(n)，但它支持动态查询，且有很多改进版的二叉查找树可以使树高为 O(log n)，从而将最坏效率降至 O(log n)，如AVL树、红黑树等。
 
+资料来源：[维基百科](https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%85%83%E6%90%9C%E5%B0%8B%E6%A8%B9)
 ## 测试
 ```js
 node test

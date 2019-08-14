@@ -12,7 +12,7 @@ function BinarySearchTree(data) {
 }
 
 // 生成二叉树
-BinarySearchTree.prototype.init = function (data) {
+BinarySearchTree.prototype.init = function(data) {
     if (!data || !data.length) return
     data.forEach(val => {
         this.insert(val)
@@ -20,7 +20,7 @@ BinarySearchTree.prototype.init = function (data) {
 }
 
 // 返回节点数 默认返回根节点 即整棵树的节点数
-BinarySearchTree.prototype.getSize = function (node) {
+BinarySearchTree.prototype.getSize = function(node) {
     node = node || this.root
     return subGetSize(node)
 }
@@ -42,7 +42,7 @@ function subFind(val, node) {
 }
 
 // 查找包含最大值的节点
-BinarySearchTree.prototype.findMax = function (node) {
+BinarySearchTree.prototype.findMax = function(node) {
     node = node || this.root
     if (!node) return null
     return subFindMax(node)
@@ -57,7 +57,7 @@ function subFindMax(node) {
 }
 
 // 查找包含最小值的节点
-BinarySearchTree.prototype.findMin = function (node) {
+BinarySearchTree.prototype.findMin = function(node) {
     node = node || this.root
     if (!node) return null
     return subFindMin(node)
@@ -72,7 +72,7 @@ function subFindMin(node) {
 }
 
 // 删除节点
-BinarySearchTree.prototype.delete = function (val, node) {
+BinarySearchTree.prototype.delete = function(val, node) {
     node = node || this.root
     return subDelete(val, node)
 }
@@ -96,12 +96,13 @@ function subDelete(val, node) {
 }
 
 // 插入节点
-BinarySearchTree.prototype.insert = function (val) {
+BinarySearchTree.prototype.insert = function(val) {
     if (!this.root) {
         this.root = new Node(val)
         return
     }
 
+    if (this.find(val)) return
     subInsert(this.root, val)
 }
 
@@ -129,7 +130,7 @@ function subInsert(node, val) {
 }
 
 // 升序排序其实就是中序遍历一遍二叉树
-BinarySearchTree.prototype.sort = function () {
+BinarySearchTree.prototype.sort = function() {
     this.arry = []
     if (!this.root) return this.arry
     subSort(this.root.left, this.arry)
