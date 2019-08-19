@@ -2,7 +2,7 @@
 * [二叉查找树](https://github.com/woai3c/Algorithm/tree/master/03/binary-search-tree)
 * [红黑树](https://github.com/woai3c/Algorithm/tree/master/03/red-black-tree)
 
-|数据结构|查找|插入|是否支持有序性相关操作|
+|算法（数据结构）|查找|插入|是否支持有序性相关操作|
 |-|-|-|-|
 |顺序查询|N|N|否|
 |二分查找|log N|N|是|
