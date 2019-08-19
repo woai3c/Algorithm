@@ -51,9 +51,9 @@ BinarySearchTree.prototype.findMax = function(node) {
 function subFindMax(node) {
     if (node.right) {
         return subFindMax(node.right)
-    } else {
-        return node
     }
+
+    return node
 }
 
 // 查找包含最小值的节点
@@ -66,13 +66,14 @@ BinarySearchTree.prototype.findMin = function(node) {
 function subFindMin(node) {
     if (node.left) {
         return subFindMin(node.left)
-    } else {
-        return node
     }
+
+    return node
 }
 
 // 删除节点
 BinarySearchTree.prototype.delete = function(val, node) {
+    if (!this.find(val)) return null
     node = node || this.root
     return subDelete(val, node)
 }
@@ -102,7 +103,6 @@ BinarySearchTree.prototype.insert = function(val) {
         return
     }
 
-    if (this.find(val)) return
     subInsert(this.root, val)
 }
 
