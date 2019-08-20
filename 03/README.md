@@ -8,3 +8,5 @@
 |二分查找|log N|N|是|
 |二叉查找树|N|N|是|
 |红黑树|2log N|2log N|是|
+|拉链法|< log N| < log N||
+|线性探测法|clog N|clog N||
