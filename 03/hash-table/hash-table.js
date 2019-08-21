@@ -9,7 +9,7 @@ function HashTable(data = []) {
 HashTable.prototype = {
     init(data) {
         data.forEach(item => {
-            this.put(item.key, item.val)
+            this.set(item.key, item.val)
         })
     },
     // 返回哈希表键的数量 非哈希表大小
@@ -17,7 +17,7 @@ HashTable.prototype = {
         return this.n
     },
 
-    find(key) {
+    get(key) {
         for (let i = this.hashCode(key); this.keys[i] !== undefined; i = (i + 1) % this.size) {
             if (this.keys[i] == key) return this.vals[i]
         }
@@ -42,7 +42,7 @@ HashTable.prototype = {
             this.keys[i] = undefined
             this.vals[i] = undefined
             this.n--
-            this.put(tempKey, tempVal)
+            this.set(tempKey, tempVal)
             i = (i + 1) % this.size
         }
 
@@ -63,7 +63,7 @@ HashTable.prototype = {
         return false
     },
 
-    put(key, val) {
+    set(key, val) {
         if (this.n >= this.size / 2) this.resize(2 * this.size)
         let i = this.hashCode(key)
         for (; this.keys[i] !== undefined; i = (i + 1) % this.size) {
@@ -87,7 +87,7 @@ HashTable.prototype = {
         const tempTable = new HashTable(arry)
         for (let i = 0; i < this.size; i++) {
             if (this.keys[i] !== undefined) {
-                tempTable.put(this.keys[i], this.vals[i])
+                tempTable.set(this.keys[i], this.vals[i])
             }
         }
 
