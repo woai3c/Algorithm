@@ -19,3 +19,5 @@ Stack.prototype = {
         return this.arry.length
     }
 }
+
+module.exports = Stack

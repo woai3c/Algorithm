@@ -13,5 +13,11 @@ Bag.prototype = {
 
     size() {
         return this.arry.length
+    },
+
+    getData() {
+        return [...this.arry]
     }
 }
+
+module.exports = Bag

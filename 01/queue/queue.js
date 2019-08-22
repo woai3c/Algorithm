@@ -19,3 +19,5 @@ Queue.prototype = {
         return this.arry.length
     }
 }
+
+module.exports = Queue
