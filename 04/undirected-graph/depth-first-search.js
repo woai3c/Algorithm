@@ -18,7 +18,7 @@ DepthFirstSearch.prototype = {
     },
 
     isMarked(v) {
-        return this.marked[v]? true : false
+        return this.marked[v] == true
     }
 }
 

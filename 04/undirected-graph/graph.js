@@ -1,4 +1,4 @@
-const Bag = require('../01/bag/bag')
+const Bag = require('../../01/bag/bag')
 function Graph(V = 0, E = 0, data = []) {
     this.data = data
     this.V = V
