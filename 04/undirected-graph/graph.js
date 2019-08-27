@@ -37,7 +37,7 @@ Graph.prototype = {
     
     // 和 v 相邻的所有顶点
     getAdj(v) {
-        return this.adj[v].getData()
+        return this.adj[v].getData().reverse()
     },
 
     toString() {

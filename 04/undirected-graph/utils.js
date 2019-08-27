@@ -1,7 +1,7 @@
-function createGraph() {
+function createGraph(path) {
     const Graph = require('./graph')
     const fs = require('fs')
-    let data = fs.readFileSync('../data.txt', 'utf-8')
+    let data = fs.readFileSync(path, 'utf-8')
     data = data.split('\r\n')
     const V = data[0]
     const E = data[1]
