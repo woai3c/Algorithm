@@ -1,4 +1,3 @@
-const assert = require('assert')
 const { createGraph } = require('../utils')
 const DepthFirstPath = require('../depth-first-path')
 const graph = createGraph('../data/tiny.txt')
