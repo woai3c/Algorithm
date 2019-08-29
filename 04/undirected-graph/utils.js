@@ -13,6 +13,14 @@ function createGraph(path) {
     return new Graph(V, E, vData)
 }
 
+function createSymbolGraph(path, delim = ' ') {
+    const SymbolGraph = require('./symbol-graph')
+    const fs = require('fs')
+    let data = fs.readFileSync(path, 'utf-8')
+    
+    return new SymbolGraph(data, delim)
+}
+
 function getDegree(graph, v = 0) {
     let degree = 0
     graph.getAdj(v).forEach(() => {
@@ -52,5 +60,6 @@ module.exports = {
     getMaxDegree,
     getNumberOfSelfLoops,
     getAveDegree,
-    createGraph
+    createGraph,
+    createSymbolGraph,
 }
