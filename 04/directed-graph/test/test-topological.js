@@ -1,0 +1,6 @@
+const { createDigraph } = require('../utils')
+const Topological = require('../topological')
+const graph = createDigraph('../data/data.txt')
+const topological = new Topological(graph)
+console.log(topological.getOrder())
+console.log(topological.isDAG())

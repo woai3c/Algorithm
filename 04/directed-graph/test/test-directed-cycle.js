@@ -1,0 +1,6 @@
+const { createDigraph } = require('../utils')
+const DirectedCycle = require('../directed-cycle')
+const graph = createDigraph('../data/data.txt')
+const cycle = new DirectedCycle(graph)
+console.log(cycle.getCycle())
+console.log(cycle.hasCycle())
