@@ -32,7 +32,14 @@ LazyPrimMST.prototype = {
     },
 
     getWeight() {
-        return this.weight
+        const mst = this.mst
+        if (!mst.length) return null
+        let sum = 0
+        for (let i = 0, len = mst.length; i < len; i++) {
+            sum += parseFloat(mst[i].getWeight())
+        }
+
+        return sum
     }
 }
 
