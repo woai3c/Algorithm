@@ -1,0 +1,5 @@
+const { createGraph } = require('../utils')
+const LazyPrimMST = require('../lazy-prim-mst')
+const graph = createGraph('../data/tinyEWG.txt')
+const mst = new LazyPrimMST(graph)
+console.log(mst.getEdges())
