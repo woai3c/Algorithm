@@ -53,6 +53,19 @@ EdgeWeightedGraph.prototype = {
         }
 
         return str
+    },
+
+    getEdges() {
+        const edges = []
+        for (let v = 0; v < this.V; v++) {
+            this.getAdj(v).forEach(edge => {
+                if (v < edge.getOther(v)) {
+                    edges.push(edge)
+                }
+            })
+        }
+
+        return edges
     }
 }
 
