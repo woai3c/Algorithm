@@ -1,0 +1,13 @@
+edu.princeton.cs
+com.apple
+edu.princeton.cs
+com.cnn
+com.google
+edu.uva.cs
+edu.princeton.cs
+edu.princeton.cs.www
+edu.uva.cs
+edu.uva.cs
+edu.uva.cs
+com.adobe
+edu.princeton.ee
