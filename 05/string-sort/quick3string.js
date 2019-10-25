@@ -1,4 +1,4 @@
-const { exchange } = require('../utils')
+const { exchange } = require('../../utils')
 function quick3string(arry) {
     sort(arry, 0, arry.length - 1, 0)
 }
