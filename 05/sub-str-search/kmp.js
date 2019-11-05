@@ -10,11 +10,11 @@ KMP.prototype = {
         this.dfa[this.pat.charCodeAt(0)][0] = 1
         for (let i = 0, j = 1, len = this.pat.length; j < len; j++) {
             for (let c = 0, R = this.R; c < R; c++) {
-                this.dfa[c][j] = this.dfa[c][i]
+                this.dfa[c][j] = this.dfa[c][i] // 复制匹配失败情况下的值
             }
 
-            this.dfa[this.pat.charCodeAt(j)][j] = j + 1
-            i = this.dfa[this.pat.charCodeAt(j)][i]
+            this.dfa[this.pat.charCodeAt(j)][j] = j + 1 // 设置匹配成功情况下的值
+            i = this.dfa[this.pat.charCodeAt(j)][i] // 更新重启状态
         }
     },
 
