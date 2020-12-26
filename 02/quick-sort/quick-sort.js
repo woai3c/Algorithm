@@ -31,17 +31,9 @@ function partition(arry, start, end) {
 	const val = arry[start]
 	let i = start, j = end + 1
 	while (true) {
-		while (arry[++i] < val) {
-			if (i == end) {
-				break
-			}
-		}
+		while (arry[++i] < val && i < end) {}
 
-		while (arry[--j] > val) {
-			if (j == start) {
-				break
-			}
-		}
+		while (arry[--j] > val && j > start) {}
 
 		if (i >= j) break
 		exchange(arry, i, j)
