@@ -5,6 +5,10 @@
 
 资料来源：[维基百科](https://zh.wikipedia.org/wiki/%E5%A0%86%E6%8E%92%E5%BA%8F)
 
+![](../../imgs/2-13.png)
+
+![](../../imgs/2-14.png)
+
 ## 测试
 ```js
 node test
