@@ -6,7 +6,7 @@ function Node(val, color = false) {
     this.val = val
     this.left = null
     this.right = null
-    // 结点总数
+    // 节点总数
     this.size = 1
     this.color = color
 }
