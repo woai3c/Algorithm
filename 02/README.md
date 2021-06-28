@@ -16,6 +16,11 @@
 |[归并排序](https://github.com/woai3c/Algorithm/tree/master/02/merge-sort)|是|否|NlogN|N|数据量较大且要求排序稳定时|
 |[堆排序](https://github.com/woai3c/Algorithm/tree/master/02/heap-sort)|否|是|NlogN|1|堆排序适合处理数据量大的情况，数据呈流式输入时用堆排序也很方便|
 
+![](../imgs/2-15.png)
+
+![](../imgs/2-16.png)
+
+![](../imgs/2-17.png)
 
 ## 数据结构
 ### 优先队列
