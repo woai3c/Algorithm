@@ -36,8 +36,9 @@ class MaxPQ {
         const pq = this.pq
         let i = pq.length - 1
         // 添加到最后面的元素可能比它的父节点要大，所以要逐个上浮比较替换
-        while (i > 1) {
-            const j = ~~(i / 2) - 1
+        while (i > 0) {
+            // 将索引转换为从 1 开始计算，也就是将当前索引加 1，然后除以 2，再将这个数减 1，就能得到父节点的索引
+            let j = ~~((i + 1) / 2) - 1
             if (pq[i] < pq[j]) break
             exchange(pq, i, j)
             i = j
