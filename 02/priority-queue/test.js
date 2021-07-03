@@ -1,11 +1,16 @@
 const MaxPQ = require('./priority-queue')
-
+const assert = require('assert')
 const pq = new MaxPQ([10, 1, 12, 100, 5, 7, 3, 99, 8, 2, 4, 201])
 
-console.log(pq.getVal()) // 201
-console.log(pq.getVal()) // 100
-console.log(pq.getVal()) // 99
+assert.strictEqual(201, pq.getVal())
+assert.strictEqual(100, pq.getVal())
+assert.strictEqual(99, pq.getVal())
+pq.insert(999)
+pq.insert(8888)
+assert.strictEqual(8888, pq.getVal())
+assert.strictEqual(999, pq.getVal())
 pq.insert(1000)
 pq.insert(10000)
-console.log(pq.getVal()) // 10000
-console.log(pq.getVal()) // 1000
+assert.strictEqual(10000, pq.getVal())
+assert.strictEqual(1000, pq.getVal())
+console.log('测试通过')
